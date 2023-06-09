@@ -18,6 +18,11 @@ def addTwo():
         session['counter'] = 0
     return redirect('/')
 
+@app.route('/random_number', methods=['post'])
+def random_number():
+    session['counter'] += int(request.form['counter']) - 1
+    return redirect('/')
+
 
 @app.route('/destroy_session')
 def destroy_session():
@@ -26,3 +31,6 @@ def destroy_session():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+# Add a form that allows the user to specify the increment of the counter and have the counter increment accordingly

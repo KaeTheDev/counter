@@ -17,11 +17,17 @@
         <div>
             <h1>Counter</h1>
             <!--JINJA COUNTER VARIABLE HERE-->
-            
+
             <h2>{{ session['counter'] }}</h2>
             <a href="/add_two"><button type="button" class="btn btn-danger">Add Two</button></a>
             <a href="/destroy_session"><button type="button" class="btn btn-success">Reset</button></a>
-            
+
+
+            <form action='/random_number' method='post'>
+                <label for='counter'>Counter:</label>
+                <input type='number' name='counter'>
+                <input type="submit" class="btn btn-danger" value = "Add Random">
+            </form>
         </div>
     </div>
 
